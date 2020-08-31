@@ -19,6 +19,6 @@ _____
   
   - if want to install django package
    - pip install django
-  sublime editor:
+ sublime editor:
   - Sublime editor linke [click here](https://www.sublimetext.com/3)
   
