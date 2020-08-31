@@ -17,8 +17,7 @@ _____
 - 4.inheritance with examples
       
   
-  - if want to install django package
-   - pip install django
- - sublime editor:
+- if want to install django package
+ - pip install django
   - Sublime editor linke [click here](https://www.sublimetext.com/3)
   
