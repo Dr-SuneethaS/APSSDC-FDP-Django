@@ -1,6 +1,7 @@
 # APSSDC-FDP-Django
 
 [Click Here for syllabus](https://drive.google.com/file/d/1OnBUWHxKIa0ixTU8uKrWTGCE7HB3PbGl/view)
+[Recorded Videos Sheet link](https://docs.google.com/document/d/1vnpYwYvKCr_XUZJZOPrAmfrpk1OpcQk8rPqS1q6x0YI/edit?usp=sharing)
 
 _____
 ### Day1(31-08-2020)
