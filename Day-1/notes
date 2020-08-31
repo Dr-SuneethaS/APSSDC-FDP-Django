@@ -1,0 +1,138 @@
+36 hr 
+	-->3 *12 -->36 
+-->agenda
+	-->opps in python
+		-->class,object
+		-->constuctor,inheritance
+	-->python modules and packages
+	
+python support different programming patterns
+	-->fuctonal programming
+			funiton->it is block stmts
+					it can perform perticular task
+			method:in opps we calling function calling method
+			
+			funtion with in the class we calling as a method
+	-->object orinted programming
+			every thigs is in classs and objects
+			will trat every thing as real world entity as classes and objects
+			-->class,objects
+			-->poly
+			-->inheritance
+			-->encapulation
+			
+			
+	-->procedure oriented programming
+			dividing entire program into small peaces
+			
+				
+	
+	
+	
+	 
+
+
+
+
+class:
+	-->class is nothing design or blue print
+			house
+				-->design
+					-->no of houses
+					
+	-->keyword is class
+	
+		syntax:
+				class classname:
+					funtions
+					variables or objects
+				classnname.funtioname()
+				obj=classname
+					obj.funtions()
+				obj=classname
+					obj.objects
+		(variables/objects ,methods)
+class-->properties &actions
+object:
+		-->intance of a class in know as object
+		-->it is grouped items
+		syntax:
+			obj=classname()
+			
+		house:-->design
+				-->house1
+				-->house2
+				
+		class Django:
+				def app1():
+					print("i from app1")
+				def app2(self,name):
+					print("my name is "+name)
+		obj1=Django()
+		obj1.app1()
+		obj1.app2("vijay")
+		
+		obj2=Django()
+		obj2.app1()
+		obj2.app2("kumar")
+		
+Constuctor:
+	-->special kind of method in python
+	-->we can create contructor by using def keyword
+	-->the name of the constructor should be __init__(self)
+	-->main purpose of creating constructor is to be initilize instace variables in locallay , it set be as globally
+	-->construtor will be executed automatically at the time of object creating
+	
+	syntax:
+		class Cont:
+			def __init__(self):
+				print("i from contrutor")
+					
+
+					
+	Method 					Construtor
+	
+	->explicitly execute	-->automatically execute
+	->any name				-->__init__(self)
+	-->opertions &task		-->to create instace variables
+	
+inheritance:
+		the procees of creating new classes by properties of existing class
+		
+		-->types of inheritance
+				5 
+				-->single level
+					class parent:
+							statements
+					class child(parent):
+							statements
+							
+				-->multi level
+					class gf:
+						statements
+					class f:
+						statemets
+					class c:
+						statemets
+				-->multiple level
+					class A:
+						staements
+					class B:
+						staements
+					class C(A,B)
+				
+				
+				
+				
+				
+			tommorrow:
+				-->hirarical level
+				-->hybsrid level
+				-->packages and modules
+				-->django setup
+				-->introdution
+				-->project creation and apps creation
+				-->files explanation
+
+				
+	
