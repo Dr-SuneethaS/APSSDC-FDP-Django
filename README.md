@@ -6,6 +6,8 @@
 
 [click to joint slack channel](https://apssdc-e1p5010.slack.com/archives/C019KP7PJUW)
 
+[Android App for slack](https://play.google.com/store/apps/details?id=com.Slack&hl=en)
+
 _____
 ### Day1(31-08-2020)
 #### Day1 Content:
