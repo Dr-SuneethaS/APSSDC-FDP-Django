@@ -41,5 +41,6 @@ _____
     - hybrid level
         - multiple+hierarchy
 - 2.modules and packages with example
-- 3. indrodution about django
+
+- 3.indrodution about django
 
