@@ -1,0 +1,46 @@
+today agenda:
+				-->hirarical level
+						parent
+							-->child1
+							-->child2
+							-->child3
+						syntax:
+						class parent:
+								statements
+						class child2(parent):
+								statements
+						class child3(parent):
+								statements
+				-->hybrid level
+						combination multiple+hierarichal
+						multiple:
+								class A:
+									pass
+								class B:
+									pass:
+								class C(A,B)
+						hierachi:
+						class parent:
+								statements
+						class child2(parent):
+								statements
+						class child3(parent):
+								statements
+					class A:
+						pass
+					class B:
+						pass
+					class C(A,B):
+						pass
+					class parent:
+						pass
+					class child(parent):
+						pass
+					class newclass(C,child):
+							pass
+				
+				-->packages and modules
+				-->django setup
+				-->introdution
+				-->project creation and apps creation
+				-->how to run our project
