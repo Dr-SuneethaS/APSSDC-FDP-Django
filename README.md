@@ -21,9 +21,25 @@ _____
   - Object
   - Constructors
 - 4.inheritance with examples
+  - single level
+  - muti level
+  - multiple level
+  
       
   
 - if want to install django package
  - pip install django
   - Sublime editor linke [click here](https://www.sublimetext.com/3)
   
+_____
+### Day2(01-09-2020)
+#### Day2 Content:
+_____
+
+- 1.inheritance with examples
+    - hierarchy level
+    - hybrid level
+        - multiple+hierarchy
+- 2.modules and packages with example
+- 3. indrodution about django
+
