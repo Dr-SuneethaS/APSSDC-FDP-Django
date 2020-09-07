@@ -1,0 +1,26 @@
+{% extends 'mytemplates/header.html' %}
+{% block title %}::Registration::{% endblock title%}
+{% block content %}
+<div class="container">
+	<div class="card col-md-5 mx-auto mt-5">
+<h1>Register</h1>
+<form method="POST">
+	{% csrf_token %}
+	<input type="text" name="f_name" class="form-control mb-2" placeholder="First Name">
+	<input type="text" name="l_name" class="form-control mb-2"placeholder="Last Name">
+	<input type="email" name="gmail" class="form-control mb-2" placeholder="Gmail">
+	<input type="tel" name="ph_no" class="form-control mb-2" placeholder="Mobile Number">
+	<input type="text" name="username" class="form-control mb-2" placeholder="Username" required>
+	<input type="password" name="password" class="form-control mb-2" placeholder="Password">
+	<input type="radio" name="gender" value="Male"> Male
+	<input type="radio" name="gender" value="Female"> Female<br/>
+	<select name="desig" class="form-control">
+		<option value="--">--select option--</option>
+		<option value="employee">Emp</option>
+		<option value="ot">Others</option>
+	</select><br/>
+	<input type="submit" value="Register" class="btn btn-warning mb-2">
+</form>
+</div>
+</div>
+{% endblock content %}
