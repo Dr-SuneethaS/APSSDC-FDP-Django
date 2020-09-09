@@ -1,0 +1,198 @@
+Good Morning sir/madam
+
+today agenda:
+	->Model Quiries in django
+		-->CRUD operation
+			->insert
+			->Display
+			->Delete
+			->Update
+	->with handon project implementation
+		Employee
+			name:
+			age:
+			salary:10500.
+			desig:
+			
+	-->project 
+				django-admin stratproject name of project
+	-->app creation
+				python manage.py startapp name of app
+			
+	-->include our app in to settings.py
+	
+	-->admin
+		-->python manage.py migrate
+			-->creation tables
+		-->python manage.py createsuperuser
+		
+		-->run the server
+			-->login into django admin
+			
+	-->create model in models.py
+			class Emp_data(models.Model):
+		name=models.CharField(max_length=30)
+		age=models.IntegerField()
+		salary=models.FloatField()
+		desig=models.CharField(max_length=30) 
+	
+	-->python manage.py makemigration
+		-->for generation userinterface file
+	-->python manage.py migrate
+		-->userinterface file into tables
+	
+	-->model quiries:
+		-->python manage.py shell
+		-->import package
+			from appname.models import modelname
+		->insert our data/info
+			-->obj=model(fieldname=value)
+				obj.save()
+				ex:
+				data=Emp_data(name="Ravi",age=26,salary=28000,desig="Python developer",address="Tirupathi")
+				>>> data.save()
+			-->model.objects.create(fildname=value)
+			
+			Ex:	Emp_data.objects.create(name="Naresh",age=25,salary=25000,desig="grafic designer",address="Vizag")
+		
+	-->Display
+		accessing or retriving  data from database
+		-->getting all info
+				-->obj=model.objects.all()
+		-->particular info/data from database
+				-->single info
+				-->obj=model.objects.get(fieldname=value)
+				ex:
+				->data=Emp_data.objects.get(name="Naresh")
+					data.name
+					'Naresh'
+					>>> data.age
+					25
+					>>> data.salary
+					25000.0
+					>>> data.address
+					'Vizag'
+					>>> data.desig
+					'grafic designer'
+				data=Emp_data.objects.get(name="kumar",age=26)
+				data.name
+					'kumar'
+					>>> data.age
+					26
+					>>> data.desig
+					'Full stack developer'
+					>>> data.address
+					'Vijayawada'
+			-->more than one data
+					-->it is retrive multiple similar info
+				-->obj=model.objects.filter(fieldname=vlaue)
+				ex:
+				info=Emp_data.objects.filter(age=26)
+				>>> info
+					<QuerySet [<Emp_data: Emp_data object (2)>, <Emp_data: Emp_data object (3)>]>
+					>>> for data in info:
+					...     print(data.name)
+					...     print(data.age)
+					...     print(data.address)
+					...     print(data.desig)
+					...
+					kumar
+					26
+					Vijayawada
+					Full stack developer
+					Ravi
+					26
+					Tirupathi
+					Python developer
+					
+					
+				-->to get only first rowdata in database
+					obj=model.objects.first()
+					ex:
+					>>> data=Emp_data.objects.first()
+					>>> data.name
+					'vijay'
+					>>> data.age
+					25
+					>>> data.address
+					>>> data.desig
+					'Python Developer'
+				-->to retrive last data info from database
+					obj=model.objects.last()
+					ex:
+					>>> data.name
+						'Naresh'
+						>>> data.age
+						25
+						>>> data.address
+						'Vizag'
+						>>> data.desig
+						'grafic designer'
+						>>> data.salary
+						25000.0
+	
+				-->to retrive only no of rows
+					->obj=models.objects.all()[:2]
+					data=Emp_data.objects.all()[:2]
+					>>> data
+					<QuerySet [<Emp_data: Emp_data object (1)>, <Emp_data: Emp_data object (2)>]>
+					->obj=models.objects.all()[2:]
+					 data=Emp_data.objects.all()[2:]
+					>>> data
+					<QuerySet [<Emp_data: Emp_data object (3)>, <Emp_data: Emp_data object (4)>]>
+				-->obj=model.objects.all()[2:3]
+	
+					data=Emp_data.objects.all()[2:3]
+					>>> data
+					<QuerySet [<Emp_data: Emp_data object (3)>]>
+	
+			-->obj=model.objects.all()[::-1]
+			 data=Emp_data.objects.all()[::-1]
+				>>> data
+				[<Emp_data: Emp_data object (4)>, <Emp_data: Emp_data object (3)>, <Emp_data: Emp_data object (2)>, <Emp_data: Emp_data object (1)>]
+	
+			-->update
+				-->obj=model.objects.get(age=26,name="kumar")
+					obj.name="Vamshi"
+					obj.age=28
+					obj.save()
+					
+				ex:
+					//individual data updation
+					data=Emp_data.objects.get(age=26,name="kumar")
+					>>> data
+					<Emp_data: Emp_data object (2)>
+					>>> data.name="Vamshi"
+					>>> data.age=28
+					>>> data.save()
+					//multiple data updation
+					data=Emp_data.objects.all()
+					>>> for value in data:
+					...     value.age=22
+					...     value.save()
+									
+						
+				-->Delete
+						individula data:
+						data=model.objects.get(name="Vamshi")
+						data.delete()
+						
+					ex:
+					data=Emp_data.objects.get(name="Vamshi")
+					>>> data.delete()
+					(1, {'Employee_info.Emp_data': 1})
+					data=Emp_data.objects.filter(salary=25000.0)
+					>>> data.delete()
+					(2, {'Employee_info.Emp_data': 2})
+					>>> data=Emp_data.objects.all()
+					>>> data.delete()
+					(1, {'Employee_info.Emp_data': 1})
+						data=[1,2,3,4,5,6]
+						for value in data:
+		print(value)
+	
+	-->for watching everydatabase info
+			-->2 ways
+				-->internal(admin)
+				-->external(db browser)
+		

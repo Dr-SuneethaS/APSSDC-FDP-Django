@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::products::</title>
+</head>
+<body>
+	<center>
+		<a href="{% url 'addproduct' %}">Add Product</a>
+		<table border="2px solid">
+			<thead>
+				<tr>
+					<th>Product Name</th>
+					<th>Product Cost</th>
+					<th>Product wight</th>
+					<th>Product type</th>
+					<th>Product Data</th>
+					<th>Update</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for pro in data %}
+				<tr>
+					<td>{{pro.p_name}}</td>
+					<td>{{pro.p_cost}}</td>
+					<td>{{pro.p_wight}}</td>
+					<td>{{pro.p_type}}</td>
+					<td>{{pro.p_date}}</td>
+					<td><a href="{% url 'update' pro.id %}">Update</a></td>
+					<td><a href="{% url 'delete' pro.id %}">Delete</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</center>
+</body>
+</html>

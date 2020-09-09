@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::add products::</title>
+</head>
+<body>
+	<!-- paragraph-->
+	<center>
+		<form action="{% url 'addproduct' %}" method="POST">
+			{% csrf_token %}
+			<h1>Add Product</h1>
+			{{form.as_p}}
+			<input type="submit" value="Add Product">
+		</form>
+	</center>
+	<!-- Table -->
+	<!-- {{form}} -->
+	<!-- Un order list -->
+	<!-- {{form.as_ul}} -->
+</body>
+</html>

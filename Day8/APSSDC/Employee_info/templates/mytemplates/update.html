@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Update::</title>
+</head>
+<body>
+	<center>
+			<h1>Store Employee information</h1>
+			<form action="{% url 'updateit' mydata.name %}" method="POST">
+				{% csrf_token %}
+				Name:<input type="text" name="name" value="{{mydata.name}}"><br>
+				Age:<input type="text" name="age" value="{{mydata.age}}"><br>
+				Salary:<input type="text" name="salary" value="{{mydata.salary}}"><br>
+				Designation:<input type="text" name="desig" value="{{mydata.desig}}"><br>
+				Address:<input type="text" name="address" value="{{mydata.address}}"><br>
+				<input type="submit" value="Updateit">
+			</form>
+		</center>
+</body>
+</html>s

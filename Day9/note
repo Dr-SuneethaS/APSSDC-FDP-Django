@@ -1,0 +1,21 @@
+
+Today Agenda:
+		-->update
+			-->obj=model.objects.get(field=value)
+			   obj.name="APSSDC"
+			   obj.save()
+			-->def 
+		-->delete
+			obj=model.objects.get(field=value)
+			obj.delete()
+		-->model forms
+			-->insert
+				 p_name
+				 p_cost
+				 p_waight
+				 p_type
+				 p_data
+			-->display
+			-->update
+			-->delete
+		

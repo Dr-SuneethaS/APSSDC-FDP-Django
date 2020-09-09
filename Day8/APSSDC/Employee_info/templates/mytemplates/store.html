@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::Store::</title>
+</head>
+<body>
+		<center>
+			<h1>Store Employee information</h1>
+			<form action="{% url 'store' %}" method="POST">
+				{% csrf_token %}
+				Name:<input type="text" name="name" ><br>
+				Age:<input type="text" name="age"><br>
+				Salary:<input type="text" name="salary"><br>
+				Designation:<input type="text" name="desig"><br>
+				Address:<input type="text" name="address"><br>
+				<input type="submit" value="Store">
+			</form>
+		</center>
+</body>
+</html>

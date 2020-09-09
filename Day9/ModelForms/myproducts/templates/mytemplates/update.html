@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::update::</title>
+</head>
+<body>
+<center>
+		<form action="{% url 'update' data.id %}" method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" value="update">
+		</form>
+	</center>
+</body>
+</html>

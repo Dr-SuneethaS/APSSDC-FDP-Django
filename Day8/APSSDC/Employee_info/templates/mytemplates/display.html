@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>::display::</title>
+</head>
+<body>
+		<center>
+			<a href="{% url 'store' %}"> Add data </a>
+			<table border="20s solid">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Age</th>
+						<th>Salary</th>
+						<th>Desgi</th>
+						<th>Address</th>
+						<th>Update/Edit</th>
+						<th>Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for value in mydata %}
+					<tr>
+						<td><a href="{% url 'updateit' value.name %}">{{value.name}}</a></td>
+						<td>{{value.age}}</td>
+						<td>{{value.salary}}</td>
+						<td>{{value.desig}}</td>
+						<td>{{value.address}}</td>
+						<td><a href="{% url 'update' value.id %}">Update</a></td>
+						<td><a href="{% url 'delete' value.id %}">Delete</a></td>
+					</tr>
+					{% endfor%}
+				</tbody>
+			</table>
+		</center>
+</body>
+</html>
